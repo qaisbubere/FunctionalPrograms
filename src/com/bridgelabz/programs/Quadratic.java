@@ -1,5 +1,5 @@
 /****************************************************************************** 
- *  Purpose: to find distance between two points;
+ *  Purpose: to find the roots of equation;
  *
  *  @author  Qais Bubere
  *  @version 1.0

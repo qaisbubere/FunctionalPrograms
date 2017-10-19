@@ -1,5 +1,5 @@
 /****************************************************************************** 
- *  Purpose: to find N distinct Coupon numbers;
+ *  Purpose: to find sum of 3 integers, whose addition is zero;
  *
  *  @author  Qais Bubere
  *  @version 1.0
@@ -14,6 +14,14 @@ public class SumOfInteger
 {
 
 	public static void main(String args[])
+	{
+	sumCalculation();	
+	}
+	
+	/*
+	 * method for calculating sum of three integers
+	 */
+	public static void sumCalculation()
 	{
 	Scanner scanner= new Scanner(System.in);
 	System.out.println("enter size of array");
@@ -35,11 +43,11 @@ public class SumOfInteger
 		{
 			for(int k=j+1; k<length; k++)
 			{
-			if(array[i]+array[j]+array[k] == 0)
-			{
-			System.out.println("distinct triplets are "+array[i]+" "+array[j]+" "+array[k]);
-			count++;
-			}
+				if(array[i]+array[j]+array[k] == 0)
+				{
+				System.out.println("distinct triplets are "+array[i]+" "+array[j]+" "+array[k]);
+				count++;
+				}
 			}
 		}
 	} 

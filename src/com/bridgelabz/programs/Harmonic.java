@@ -12,18 +12,18 @@ import java.util.Scanner;
 
 public class Harmonic
 {	
-	static int Numerator = 1, Denominator;
+	static int numerator = 1, denominator;
 	public static void main(String args[])
 	{
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter a number");
-	int Number = scanner.nextInt();
+	int number = scanner.nextInt();
 	
-	for(int i =1;i<=Number;i++)
+	for(int i =1;i<=number;i++)
 	{
-	Denominator = i;
-	System.out.print(Numerator+"/"+Denominator);
-	if(Denominator<Number)
+	denominator = i;
+	System.out.print(numerator+"/"+denominator);
+	if(denominator<number)
 	{
 	System.out.print(" + ");
 	}	

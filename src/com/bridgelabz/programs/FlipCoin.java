@@ -12,15 +12,15 @@ import java.util.Scanner;
 
 public class FlipCoin
 {
-	static int i;
 	static float Tail=0,Head=0,NumberOfFlips =0, HeadPercentage, TailPercentage;
+	
 	public static void main(String args[])
 	{
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter the number of times u wish to flip the coin");
 	int flip = scanner.nextInt();
 
-	for(i=1; i<=flip;i++)
+	for(int i=1; i<=flip;i++)
 	{
 	if(Math.random()<0.5)
 	{
@@ -40,7 +40,7 @@ public class FlipCoin
 	HeadPercentage= (Head/NumberOfFlips)*100;
 	TailPercentage = (100 - HeadPercentage);
 	System.out.println("percentage of heads are :"+HeadPercentage);
-	System.out.println("percentage of tailss are :"+TailPercentage);
+	System.out.println("percentage of tails are :"+TailPercentage);
 	}
 }
 

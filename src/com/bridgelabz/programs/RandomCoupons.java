@@ -14,21 +14,22 @@ import java.util.Scanner;
 public class RandomCoupons
 {	
 	static Scanner scanner = new Scanner(System.in);
-	static int count = 0, iteration =0,flag, i=0, random1, random2,n,num;
+	static int count = 0, iteration =0,flag, i=0, random1, random2,number;
 	
 	
-	public static void coupons(int num)
+	public static void coupons(int number)
 	{	
-		int []array = new int[num];
-		random1 = 1 + (int)(Math.random() * num);
+		int []array = new int[number];
+		random1 = 1 + (int)(Math.random() * number);
 		array[i] = random1;	
 		count++;
 		iteration++;
-		while(count != num)
+		while(count != number)
 		{	
 		int length = array.length;
 		iteration++;
-		random2 = 1 + (int)(Math.random() * num);
+		random2 = 1 + (int)(Math.random() * number);
+		System.out.println(random2);
 		flag = 0;
 		for(int j=length-1;j>=0;j--)
 		{
@@ -39,26 +40,27 @@ public class RandomCoupons
 			
 		}
 		if(flag == 0)
-		{	i++;
-			array[i] = random2;//i++;
+		{	
+			i++;
+			array[i] = random2;
 			count++;	
 		}
 		
 		}
 		
 		System.out.println("distinct coupons are ");
-		for( int p = 0;p<num ; p++)
+		for( int p = 0;p<number ; p++)
 		{
 			System.out.print(array[p]+" ");
 		}
 		System.out.println();
-		System.out.println(+iteration+" iterations are required to generate "+num+" coupons");
+		System.out.println(+iteration+" iterations are required to generate "+number+" coupons");
 	}
 	
 	public static void main(String args[])
 	{
 		System.out.println("how many distinct coupons do you want?");
-		n = scanner.nextInt();
-		coupons(n);
+		number = scanner.nextInt();
+		coupons(number);
 	}
 }

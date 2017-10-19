@@ -13,11 +13,11 @@ public class Distance
 {
 	public static void main(String []args)
 	{
-	int x = Integer.parseInt(args[0]);
-	int y = Integer.parseInt(args[1]);
+	int point1 = Integer.parseInt(args[0]);
+	int point2 = Integer.parseInt(args[1]);
 	
-	double distance = Math.sqrt((x*x)+(y*y));
+	double distance = Math.sqrt((point1*point1)+(point2*point2));
 	
-	System.out.println("the distance from ("+x+ ","+x+") to ("+y+","+y+") is : " +distance);
+	System.out.println("the distance from ("+point1+ ","+point1+") to ("+point2+","+point2+") is : " +distance);
 	}
 }

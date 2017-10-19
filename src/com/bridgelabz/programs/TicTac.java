@@ -18,26 +18,28 @@ public class TicTac
 	int [][]Array = new int[3][3];
 	int num, number;
 	static char board[][] = new char[3][3];
+	
 	public static void main(String[]args)throws Exception
 	{	
 	System.out.println("player 1: Computer \nPlayer 2: User");
 	Board();
 	TicTac object = new TicTac();
-	object.ComputersTurn();
+	object.computersTurn();
 	}
 	
 
-	//Tic-Tac-Toe board printing
+	/*
+	 * Tic-Tac-Toe board printing
+	 */
 	public static void Board()
 	{
 		
-	 for(int i = 0; i < 3; i++)
+	for(int i = 0; i < 3; i++)
     {
         for(int j = 0; j <3; j++)
-         {
-          
-			board[i][j] = ' ';
-         }
+        { 
+		board[i][j] = ' ';
+        }
     }
 
 	System.out.println(" 0     1    2");
@@ -46,11 +48,13 @@ public class TicTac
     System.out.println("1" + board[1][0] + "  |  " + board[1][1] + " | " + board[1][2]);  
     System.out.println("  -----------");
     System.out.println("2" + board[2][0] + "  |  " + board[2][1] + " | " + board[2][2]); 
-		}
+	}
 
 
-	//computers turn to play
-	public void ComputersTurn()
+	/*
+	 * computers turn to play
+	 */
+	public void computersTurn()
 	{
 	
 	int random = 0 + (int)(Math.random() * 8+1);
@@ -60,13 +64,13 @@ public class TicTac
 	{
 		if(Array[0][0] == 0)
 		{	
-		ComputersDisplay(0);
+		computersDisplay(0);
 		}
 		
 		else
 		{	
 		System.out.println("the space is occupied. please give another number");
-		ComputersTurn();
+		computersTurn();
 		}		
 	}
 
@@ -74,13 +78,13 @@ public class TicTac
 		{
 			if(Array[0][1] == 0)
 			{	
-			ComputersDisplay(1);
+			computersDisplay(1);
 			}
 		
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}
 		}
 
@@ -88,14 +92,14 @@ public class TicTac
 		{
 			if(Array[0][2] == 0)
 			{
-			ComputersDisplay(2);
+			computersDisplay(2);
 			}
 
 			
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}		
 		}
 
@@ -103,14 +107,14 @@ public class TicTac
 		{
 			if(Array[1][0] == 0)
 			{	
-			ComputersDisplay(3);
+			computersDisplay(3);
 			}
 
 			
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}
 		}
 
@@ -118,14 +122,14 @@ public class TicTac
 		{
 			if(Array[1][1] == 0)
 			{	
-			ComputersDisplay(4);
+			computersDisplay(4);
 			}
 
 			
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}		
 		}
 
@@ -133,14 +137,14 @@ public class TicTac
 		{
 			if(Array[1][2] == 0)
 			{	
-			ComputersDisplay(5);
+			computersDisplay(5);
 		}
 
 		
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}		
 		}
 
@@ -148,14 +152,14 @@ public class TicTac
 		{
 			if(Array[2][0] == 0)
 			{	
-		ComputersDisplay(6);
+		computersDisplay(6);
 		}
 
 		
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}		
 		}
 
@@ -163,14 +167,14 @@ public class TicTac
 		{
 			if(Array[2][1] == 0)
 			{	
-		ComputersDisplay(7);
+		computersDisplay(7);
 		}
 
 		
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}		
 		}
 
@@ -178,21 +182,24 @@ public class TicTac
 		{
 			if(Array[2][2] == 0)
 			{	
-		ComputersDisplay(8);
+		computersDisplay(8);
 		}
 
 		
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
-			this.ComputersTurn();
+			this.computersTurn();
 			}		
 		}
 
 	}
 
 
-	public void ComputersDisplay(int num)
+	/*
+	 * to display the '0' printed by computer
+	 */
+	public void computersDisplay(int num)
 	{
 	if(num == 0)
 	{
@@ -268,7 +275,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -344,7 +351,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -418,7 +425,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -491,7 +498,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -564,7 +571,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -638,7 +645,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -713,7 +720,7 @@ public class TicTac
 
 	else
 	{
-	UsersTurn();
+	usersTurn();
 	}
 }
 
@@ -788,7 +795,7 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 
@@ -862,13 +869,13 @@ public class TicTac
 		}
 
 		else{
-		UsersTurn();
+		usersTurn();
 		}
 		}
 }
 		
 	//users turn to play
-	public void UsersTurn()
+	public void usersTurn()
 	{
 	Scanner scanner= new Scanner(System.in);
 	System.out.println("your turn");
@@ -879,40 +886,43 @@ public class TicTac
 	if(Array[row][column] == 0)
 		{	
 		if(row == 0 && column == 0)
-		UsersDisplay(0);
+		usersDisplay(0);
 
 		else if(row == 0 && column == 1)
-		UsersDisplay(1);
+		usersDisplay(1);
 		
 		else if(row == 0 && column == 2)
-		UsersDisplay(2);
+		usersDisplay(2);
 
 		else if(row == 1 && column == 0)
-		UsersDisplay(3);
+		usersDisplay(3);
 
 		else if(row == 1 && column == 1)
-		UsersDisplay(4);
+		usersDisplay(4);
 
 		else if(row == 1 && column == 2)
-		UsersDisplay(5);
+		usersDisplay(5);
 
 		else if(row == 2 && column == 0)
-		UsersDisplay(6);
+		usersDisplay(6);
 
 		else if(row == 2 && column == 1)
-		UsersDisplay(7);
+		usersDisplay(7);
 
 		else if(row == 2 && column == 2)
-		UsersDisplay(8);
+		usersDisplay(8);
 		}
 	else
 		{
 		System.out.println("space occupied. please give another value");
-		UsersTurn();
+		usersTurn();
 		}	
 	}
 	
-	public void UsersDisplay(int number)
+	/*
+	 * to display the 'X' printed by user at a desired position
+	 */
+	public void usersDisplay(int number)
 	{
 	if(number == 0)
 	{
@@ -983,7 +993,7 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
@@ -1056,7 +1066,7 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
@@ -1131,7 +1141,7 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
@@ -1205,20 +1215,19 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
 	
 	if(number == 4)
 	{
-		int i=1;
-	  	int j=1;
+	int i=1;
+	int j=1;
 	for( i = 1; i < 2; i++)
     {
         for( j = 1; j <2; j++)
-         {
-          
+         {     
 			board[i][j] = 'X';
          }
     }
@@ -1279,20 +1288,19 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
 	
 	if(number == 5)
 	{
-		int i=1;
-	  	int j=2;
+	int i=1;
+	int j=2;
 	for( i = 1; i < 2; i++)
     {
         for( j = 2; j <3; j++)
-         {
-          
+         {         
 			board[i][j] = 'X';
          }
     }
@@ -1308,7 +1316,6 @@ public class TicTac
 		if(Array[0][0]=='X' && Array[0][1] == 'X' && Array[0][2] == 'X')
 		{
 		System.out.println("user wins");
-		
 		}
 	
 		else if(Array[0][0]=='X' && Array[1][0] == 'X' && Array[2][0] == 'X')
@@ -1318,55 +1325,48 @@ public class TicTac
 
 		else if(Array[0][2]=='X' && Array[1][2] == 'X' && Array[2][2] == 'X')
 		{
-		System.out.println("user wins");
-		
+		System.out.println("user wins");		
 		}
 
 		else if(Array[2][0]=='X' && Array[2][1] == 'X' && Array[2][2] == 'X')
 		{
-		System.out.println("user wins");
-		
+		System.out.println("user wins");		
 		}
 	
 		else if(Array[0][0]=='X' && Array[1][1] == 'X' && Array[2][2] == 'X')
 		{
-		System.out.println("user wins");
-		
+		System.out.println("user wins");	
 		}
 	
 		else if(Array[0][2]=='X' && Array[1][1] == 'X' && Array[2][0] == 'X')
 		{
-		System.out.println("user wins");
-				
+		System.out.println("user wins");			
 		}
 
 		else if(Array[1][0]=='X' && Array[1][1] == 'X' && Array[1][2] == 'X')
 		{
-		System.out.println("user wins");
-		
+		System.out.println("user wins");		
 		}
 
 		else if(Array[0][1]=='X' && Array[1][1] == 'X' && Array[2][1] == 'X')
 		{
-		System.out.println("user wins");
-		
+		System.out.println("user wins");	
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
 
 	if(number == 6)
 	{
-		int i=2;
-	  	int j=0;
+	int i=2;
+	int j=0;
 	for( i = 2; i < 3; i++)
     {
         for( j = 0; j <1; j++)
-         {
-          
+         {      
 			board[i][j] = 'X';
          }
     }
@@ -1381,8 +1381,7 @@ public class TicTac
 
 		if(Array[0][0]=='X' && Array[0][1] == 'X' && Array[0][2] == 'X')
 		{
-		System.out.println("user wins");
-		
+		System.out.println("user wins");	
 		}
 	
 		else if(Array[0][0]=='X' && Array[1][0] == 'X' && Array[2][0] == 'X')
@@ -1427,7 +1426,7 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
@@ -1439,8 +1438,7 @@ public class TicTac
 	for( i = 2; i < 3; i++)
     {
         for( j = 1; j <2; j++)
-         {
-          
+         {      
 			board[i][j] = 'X';
          }
     }
@@ -1501,7 +1499,7 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 
@@ -1575,7 +1573,7 @@ public class TicTac
 		}
 		else
 		{
-		ComputersTurn();
+		computersTurn();
 		}						
 	}
 }		

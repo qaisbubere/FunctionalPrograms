@@ -9,7 +9,6 @@
  ******************************************************************************/
 
 package com.bridgelabz.programs;
-import java.util.Scanner;
 
 public class Gambler
 {
@@ -42,7 +41,7 @@ public class Gambler
 	}
 
 	double percentageOfWin = (win/trial)*100;
-	double percentageOfLoss = trial - percentageOfWin;
+	double percentageOfLoss = 100 - percentageOfWin;
 	System.out.println(win+ " games won out of "+trial);
 	System.out.println("winning percentage is "+percentageOfWin+"%");
 	System.out.println("losing percentage is "+percentageOfLoss+"%");

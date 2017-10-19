@@ -12,29 +12,30 @@ import java.util.Scanner;
 
 public class PrimeFactor
 {	
-	static int Number;
+	static int number,remainingNumber;
 	static Scanner scanner = new Scanner(System.in);
+	
 	public static void main(String[]args)
 	{
 	primeFactor();
 	}
 	
+	/*
+	 * method for finding prime factor of given number
+	 */
 	public static void primeFactor()
 	{
 	System.out.println("enter a number");
-	int Number = scanner.nextInt();
-	for(int i=2; i*i<=Number; i++)
+	number = scanner.nextInt();
+	while(number!=1)
 	{
-	if(Number%i==0)
+	for(int i=2; i<=number; i++)
 	{
-		for(int j=1; j<Number; j++)
+		while(number%i==0)
 		{
-			if(i%j == 0)
-			{
-				System.out.println(i);
-			}
+		number = number/i;
+		System.out.println(i);
 		}
-	
 	}
 	}
 	System.out.println("press 1 if you wish to continue");

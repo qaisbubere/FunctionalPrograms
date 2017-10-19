@@ -1,6 +1,6 @@
 
 /****************************************************************************** 
- *  Purpose: A library for reading and printing 2D array.
+ *  Purpose: Program for reading and printing 2D array.
  *
  *  @author  Qais Bubere
  *  @version 1.0
@@ -14,7 +14,7 @@ import java.io.PrintWriter;
 import java.io.OutputStreamWriter;
 public class Array
 {
-	static int Rows,Columns,total,i,j;
+	static int rows,columns,total;
 	
 
 	public static void main(String args[])throws Exception
@@ -26,141 +26,152 @@ public class Array
 	
 	switch(choice)
 	{
-	case 1:
-	IntInputArray();
-	break;
-
-	case 2:
-	DoubleInputArray();
-	break;
+		case 1:
+		intInputArray();
+		break;
+	
+		case 2:
+		doubleInputArray();
+		break;
+			
+		case 3:
+		booleanInputArray();
+		break;
 		
-	case 3:
-	BooleanInputArray();
-	break;
-	
-	default:
-	System.out.println("wrong choice");	
+		default:
+		System.out.println("wrong choice");	
 	}
 	}
 	
-	
-	public static void IntInputArray()
+	/*
+	 * method for accepting integer elements
+	 */
+	public static void intInputArray()
 	{
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter number of rows");
-	Rows = scanner.nextInt();
+	rows = scanner.nextInt();
 	System.out.println("enter number of columns");
-	Columns= scanner.nextInt();
-	total = Rows*Columns;
+	columns= scanner.nextInt();
+	total = rows*columns;
 	
-	int [][]intarray = new int [Rows][Columns];
+	int [][]intArray = new int [rows][columns];
 	System.out.println("enter " +total+ "integer elements");
-	for(i=0; i<Rows ; i++)
-	{
-	for(j=0;j<Columns; j++)
-	{
-	intarray[i][j] = scanner.nextInt();
-	}
-	}
-	IntOutputArray(intarray);
+		for(int i=0; i<rows ; i++)
+		{
+		for(int j=0;j<columns; j++)
+		{
+		intArray[i][j] = scanner.nextInt();
+		}
+		}
+	intOutputArray(intArray);
 	}
 	
-	public static void IntOutputArray(int intarray[][])
+	
+	/*
+	 * method for displaying integer elements in a 2D array fromat
+	 */
+	public static void intOutputArray(int intArray[][])
 	{
 	System.out.println("elements of integer array are :");
 	PrintWriter printwriter = new PrintWriter(new OutputStreamWriter(System.out));
-	for(i=0; i<Rows ; i++)
-	{
-	for(j=0;j<Columns; j++)
-	{
-	printwriter.print("\t"+intarray[i][j]);
-	printwriter.flush();
-	}
-	System.out.println("\n");
-	}
-	
+		for(int i=0; i<rows ; i++)
+		{
+		for(int j=0;j<columns; j++)
+		{
+		printwriter.print("\t"+intArray[i][j]);
+		}
+		printwriter.flush();
+		System.out.println("\n");
+		}	
 	}
 
 	
-	public static void DoubleInputArray()
+	/*
+	 * this method accepts double elements from user
+	 */
+	public static void doubleInputArray()
 	{
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter number of rows");
-	Rows = scanner.nextInt();
+	rows = scanner.nextInt();
 	System.out.println("enter number of columns");
-	Columns= scanner.nextInt();
+	columns= scanner.nextInt();
 
-	double [][]darray = new double[Rows][Columns];
-	total = Rows*Columns;
+	double [][]doubleArray = new double[rows][columns];
+	total = rows*columns;
 		
 	System.out.println("enter " +total+ "double elements");
-	for(i=0; i<Rows ; i++)
-	{
-	for(j=0;j<Columns; j++)
-	{
-	darray[i][j] = scanner.nextDouble();
-	}
-	}
-	DoubleOutputArray(darray);
+		for(int i=0; i<rows ; i++)
+		{
+		for(int j=0;j<columns; j++)
+		{
+		doubleArray[i][j] = scanner.nextDouble();
+		}
+		}
+	doubleOutputArray(doubleArray);
 	}
 
-	
-	public static void DoubleOutputArray(double darray[][])
+	/*
+	 * this method displays double elements in a 2D array format
+	 */
+	public static void doubleOutputArray(double doubleArray[][])
 	{
 	System.out.println("elements of double array are :");
 	PrintWriter printwriter = new PrintWriter(new OutputStreamWriter(System.out));
-	for(i=0; i<Rows ; i++)
-	{
-	for(j=0;j<Columns; j++)
-	{
-	printwriter.print("\t"+darray[i][j]);
-	printwriter.flush();
-	}
-	System.out.println("\n");
-	}
+		for(int i=0; i<rows ; i++)
+		{
+		for(int j=0;j<columns; j++)
+		{
+		printwriter.print("\t"+doubleArray[i][j]);
+		printwriter.flush();
+		}
+		System.out.println("\n");
+		}
 	
 	}
 
-		
-	public static void BooleanInputArray()
+	/*
+	 * this method accepts elements of boolean type from the user
+	 */
+	public static void booleanInputArray()
 	{
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter number of rows");
-	Rows = scanner.nextInt();
+	rows = scanner.nextInt();
 	System.out.println("enter number of columns");
-	Columns= scanner.nextInt();
-
-	boolean [][]barray = new boolean[Rows][Columns];
+	columns= scanner.nextInt();
+	total = rows+columns;
+	
+	boolean [][]booleanArray = new boolean[rows][columns];
 	System.out.println("enter " +total+ "boolean elements");
-	for(i=0; i<Rows ; i++)
-	{
-	for(j=0;j<Columns; j++)
-	{
-	barray[i][j] = scanner.nextBoolean();
-	}
-	}
-	BooleanOutputArray(barray);
+		for(int i=0; i<rows ; i++)
+		{
+		for(int j=0;j<columns; j++)
+		{
+		booleanArray[i][j] = scanner.nextBoolean();
+		}
+		}
+	booleanOutputArray(booleanArray);
 	}
 
 	
-
-	public static void BooleanOutputArray(boolean barray[][])
+	/*
+	 * method to display boolean output in a 2D array format
+	 */
+	public static void booleanOutputArray(boolean booleanArray[][])
 	{
 	System.out.println("elements of boolean array are :");
 	PrintWriter printwriter = new PrintWriter(new OutputStreamWriter(System.out));
-	for(i=0; i<Rows ; i++)
-	{
-	for(j=0;j<Columns; j++)
-	{
-	printwriter.print("\t"+barray[i][j]);
-	printwriter.flush();
-	}
-	System.out.println("\n");
-	}
+		for(int i=0; i<rows ; i++)
+		{
+		for(int j=0;j<columns; j++)
+		{
+		printwriter.print("\t"+booleanArray[i][j]);
+		printwriter.flush();
+		}
+		System.out.println("\n");
+		}
 	
-	}
-	
-	 
-
-	
+	}	
 }

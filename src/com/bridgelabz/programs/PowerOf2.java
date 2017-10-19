@@ -16,15 +16,15 @@ public class PowerOf2
 	public static void main(String args[])
 	{
 	Scanner scanner = new Scanner(System.in);
-	System.out.println("enter the power vlaue");
+	System.out.println("enter the power value");
 	int power = scanner.nextInt();
 	
 	if(power>0 && power<31)
 	{	
 	for(int i=1; i<=power; i++)
 		{
-		double Answer = Math.pow(2,i);
-		System.out.println("2 ^ "+i+" = "+Answer);
+		double answer = Math.pow(2,i);
+		System.out.println("2 ^ "+i+" = "+answer);
 		}
 	}
 	else

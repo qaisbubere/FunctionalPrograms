@@ -1,6 +1,6 @@
 
 /****************************************************************************** 
- *  Purpose: replace the string with given username.
+ *  Purpose: replace the string with given "username".
  *
  *  @author  Qais Bubere
  *  @version 1.0
@@ -13,19 +13,36 @@ import java.util.Scanner;
 
 public class ReplaceString
 {
-public static void main(String[]args)
-{  String inputstring;
-String string1; 
-	 do
-	 {
-	Scanner scanner = new Scanner(System.in);
-	 string1 = "Hello <<UserName>>, How are you?";
+	static String inputstring;
+	static String string1; 
+	public static void main(String[]args)
+	{  
+		replaceString();
+	}
+	
+	/*
+	 * to replace the given string with user defined string
+	 */
+	public static void replaceString()
+	{
+		Scanner scanner = new Scanner(System.in);
+		string1 = "Hello <<UserName>>, How are you?";
 
-	System.out.println("Given string is: \n Hello <<UserName>>, How are you?");
-	System.out.println(" enter your name");
-	 inputstring = scanner.next();
-	 }while(inputstring.length()<3);
-	String replacestr =string1.replace("<<UserName>>",inputstring); 
-	System.out.println("replaced string is \n"+replacestr);
-}
+		System.out.println("Given string is: \n Hello <<UserName>>, How are you?");
+		System.out.println(" enter your name");
+		inputstring = scanner.next();
+		 
+			if(inputstring.length() >= 3)
+			{
+				String replacestring =string1.replace("<<UserName>>",inputstring); 
+				System.out.println("replaced string is \n"+replacestring);
+			}
+			else
+			{
+				System.out.println("please enter more than 3 characters");
+				replaceString();
+			}
+	}
+	
+
 } 
