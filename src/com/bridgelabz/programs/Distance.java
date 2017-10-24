@@ -9,10 +9,8 @@
 
 package com.bridgelabz.programs;
 
-public class Distance
-{
-	public static void main(String []args)
-	{
+public class Distance{
+	public static void main(String []args){
 	int point1 = Integer.parseInt(args[0]);
 	int point2 = Integer.parseInt(args[1]);
 	

@@ -10,23 +10,20 @@
 package com.bridgelabz.programs;
 import java.util.Scanner;
 
-public class Harmonic
-{	
+public class Harmonic{	
 	static int numerator = 1, denominator;
-	public static void main(String args[])
-	{
+	
+	public static void main(String args[]){
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter a number");
 	int number = scanner.nextInt();
 	
-	for(int i =1;i<=number;i++)
-	{
+	for(int i =1;i<=number;i++){
 	denominator = i;
 	System.out.print(numerator+"/"+denominator);
+	
 	if(denominator<number)
-	{
-	System.out.print(" + ");
-	}	
+		System.out.print(" + ");	
 	} 
 	System.out.println();
 }

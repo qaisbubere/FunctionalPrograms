@@ -10,34 +10,23 @@
 
 package com.bridgelabz.programs;
 
-public class Gambler
-{
-	public static void main(String[]args)
-	{
+public class Gambler{
+	public static void main(String[]args){
 	int stake = Integer.parseInt(args[0]);
 	int goal =  Integer.parseInt(args[1]);
 	int trial = Integer.parseInt(args[2]);
-	
 	int bet=0, win=0;
 	
-	for(int i=0; i<trial; i++)
-	{
-		while(stake>0 && stake<goal)
-		{
+	for(int i=0; i<trial; i++){
+		while(stake>0 && stake<goal){
 		bet++;
 			if(Math.random()<0.5)
-			{
 			stake++;
-			}
-			else
-			{
+			else	
 			stake--;
-			}
 		}
 		if(stake == goal)
-		{
 		win++;
-		}
 	}
 
 	double percentageOfWin = (win/trial)*100;

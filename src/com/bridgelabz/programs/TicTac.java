@@ -10,8 +10,7 @@
 package com.bridgelabz.programs;
 import java.util.Scanner;
 
-public class TicTac
-{
+public class TicTac{
 	//Array[0][0] = 0; Array[0][1] = 1; Array[0][2] = 2;
 	//Array[1][0] = 3; Array[1][1] = 4; Array[1][2] = 5;
 	//Array[2][0] = 6; Array[2][1] = 7; Array[2][2] = 8;
@@ -19,8 +18,7 @@ public class TicTac
 	int num, number;
 	static char board[][] = new char[3][3];
 	
-	public static void main(String[]args)throws Exception
-	{	
+	public static void main(String[]args)throws Exception{	
 	System.out.println("player 1: Computer \nPlayer 2: User");
 	Board();
 	TicTac object = new TicTac();
@@ -31,13 +29,10 @@ public class TicTac
 	/*
 	 * Tic-Tac-Toe board printing
 	 */
-	public static void Board()
-	{
+	public static void Board(){
 		
-	for(int i = 0; i < 3; i++)
-    {
-        for(int j = 0; j <3; j++)
-        { 
+	for(int i = 0; i < 3; i++){
+        for(int j = 0; j <3; j++){ 
 		board[i][j] = ' ';
         }
     }
@@ -54,18 +49,14 @@ public class TicTac
 	/*
 	 * computers turn to play
 	 */
-	public void computersTurn()
-	{
+	public void computersTurn(){
 	
 	int random = 0 + (int)(Math.random() * 8+1);
 	System.out.println("computer generated : "+random); 
 	
-	if(random == 0)
-	{
-		if(Array[0][0] == 0)
-		{	
+	if(random == 0){
+		if(Array[0][0] == 0)	
 		computersDisplay(0);
-		}
 		
 		else
 		{	
@@ -74,12 +65,31 @@ public class TicTac
 		}		
 	}
 
-	else if(random == 1)
-		{
-			if(Array[0][1] == 0)
-			{	
+	else if(random == 1){
+			if(Array[0][1] == 0)	
 			computersDisplay(1);
+			
+			else
+			{
+			System.out.println("the space is occupied. please give another number");
+			this.computersTurn();
 			}
+		}
+
+	else if(random == 2){
+			if(Array[0][2] == 0)
+			computersDisplay(2);
+
+			else
+			{
+			System.out.println("the space is occupied. please give another number");
+			this.computersTurn();
+			}		
+		}
+
+	else if(random == 3){
+			if(Array[1][0] == 0)	
+			computersDisplay(3);
 		
 			else
 			{
@@ -88,44 +98,10 @@ public class TicTac
 			}
 		}
 
-	else if(random == 2)
-		{
-			if(Array[0][2] == 0)
-			{
-			computersDisplay(2);
-			}
-
-			
-			else
-			{
-			System.out.println("the space is occupied. please give another number");
-			this.computersTurn();
-			}		
-		}
-
-	else if(random == 3)
-		{
-			if(Array[1][0] == 0)
-			{	
-			computersDisplay(3);
-			}
-
-			
-			else
-			{
-			System.out.println("the space is occupied. please give another number");
-			this.computersTurn();
-			}
-		}
-
-	else if(random == 4)
-		{
-			if(Array[1][1] == 0)
-			{	
+	else if(random == 4){
+			if(Array[1][1] == 0)		
 			computersDisplay(4);
-			}
 
-			
 			else
 			{
 			System.out.println("the space is occupied. please give another number");
@@ -724,8 +700,6 @@ public class TicTac
 	}
 }
 
-
-
 	if(num == 7)
 	{
 		int i=2;
@@ -874,7 +848,9 @@ public class TicTac
 		}
 }
 		
-	//users turn to play
+	/*
+	 * method for users turn to play
+	 */
 	public void usersTurn()
 	{
 	Scanner scanner= new Scanner(System.in);
@@ -918,6 +894,7 @@ public class TicTac
 		usersTurn();
 		}	
 	}
+	
 	
 	/*
 	 * to display the 'X' printed by user at a desired position

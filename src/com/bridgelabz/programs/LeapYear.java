@@ -10,18 +10,15 @@
 package com.bridgelabz.programs;
 import java.util.Scanner;
 
-public class LeapYear
-{
+public class LeapYear{
 	static boolean status =false;
-	public static void main(String args[])
-	{
+	public static void main(String args[]){
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter a year");
 	int year = scanner.nextInt();
 	int length = Integer.toString(year).length();
 
-	if(length == 4)
-	{
+	if(length == 4){
 	if(year%4==0)
 	status = true;
 	
@@ -35,9 +32,8 @@ public class LeapYear
 
 	System.out.println(status);
 	}
+	
 	else
-	{
 	System.out.println("please enter 4 digit year");
-	}
 }
 }

@@ -19,8 +19,7 @@ public class StopWatch
 	/*
 	 * to get current time which will be treated as start time.
 	 */
-	public static void start()
-	{
+	public static void start(){
 	startTime = System.currentTimeMillis();	
 	try{
 	Thread.sleep(1000);
@@ -31,8 +30,7 @@ public class StopWatch
 	/*
 	 * to get current time which will be treated as stop time 
 	 */
-	public static void stop()
-	{
+	public static void stop(){
 	stopTime = System.currentTimeMillis();	
 	}
 
@@ -40,15 +38,13 @@ public class StopWatch
 	/*
 	 * this method calculates the elapsed time between start() and stop() methods
 	 */
-	public void getElapsedTime()
-	{
+	public void getElapsedTime(){
 	long elapsed;
     elapsed = (stopTime - startTime);
 	System.out.println("elapsed time is : "+elapsed);
 	}
 
-	public static void main(String[]args) throws Exception
-	{
+	public static void main(String[]args) throws Exception{
 	StopWatch stopwatch = new StopWatch();
 	StopWatch.start();
 	StopWatch.stop();

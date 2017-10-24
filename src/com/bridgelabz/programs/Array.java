@@ -12,20 +12,16 @@ package com.bridgelabz.programs;
 import java.util.Scanner;
 import java.io.PrintWriter;
 import java.io.OutputStreamWriter;
-public class Array
-{
+public class Array{
 	static int rows,columns,total;
-	
 
-	public static void main(String args[])throws Exception
-	{
+	public static void main(String args[])throws Exception{
 	Scanner scanner = new Scanner(System.in);
 
 	System.out.println(" 1: Integer \n 2:Double \n 3:Boolean");
 	int choice = scanner.nextInt();
 	
-	switch(choice)
-	{
+	switch(choice){
 		case 1:
 		intInputArray();
 		break;
@@ -43,11 +39,11 @@ public class Array
 	}
 	}
 	
+	
 	/*
 	 * method for accepting integer elements
 	 */
-	public static void intInputArray()
-	{
+	public static void intInputArray(){
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter number of rows");
 	rows = scanner.nextInt();
@@ -57,10 +53,8 @@ public class Array
 	
 	int [][]intArray = new int [rows][columns];
 	System.out.println("enter " +total+ "integer elements");
-		for(int i=0; i<rows ; i++)
-		{
-		for(int j=0;j<columns; j++)
-		{
+		for(int i=0; i<rows ; i++){
+		for(int j=0;j<columns; j++){
 		intArray[i][j] = scanner.nextInt();
 		}
 		}
@@ -69,16 +63,13 @@ public class Array
 	
 	
 	/*
-	 * method for displaying integer elements in a 2D array fromat
+	 * method for displaying integer elements in a 2D array format
 	 */
-	public static void intOutputArray(int intArray[][])
-	{
+	public static void intOutputArray(int intArray[][]){
 	System.out.println("elements of integer array are :");
 	PrintWriter printwriter = new PrintWriter(new OutputStreamWriter(System.out));
-		for(int i=0; i<rows ; i++)
-		{
-		for(int j=0;j<columns; j++)
-		{
+		for(int i=0; i<rows ; i++){
+		for(int j=0;j<columns; j++){
 		printwriter.print("\t"+intArray[i][j]);
 		}
 		printwriter.flush();
@@ -90,8 +81,7 @@ public class Array
 	/*
 	 * this method accepts double elements from user
 	 */
-	public static void doubleInputArray()
-	{
+	public static void doubleInputArray(){
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter number of rows");
 	rows = scanner.nextInt();
@@ -102,40 +92,35 @@ public class Array
 	total = rows*columns;
 		
 	System.out.println("enter " +total+ "double elements");
-		for(int i=0; i<rows ; i++)
-		{
-		for(int j=0;j<columns; j++)
-		{
+		for(int i=0; i<rows ; i++){
+		for(int j=0;j<columns; j++){
 		doubleArray[i][j] = scanner.nextDouble();
 		}
 		}
 	doubleOutputArray(doubleArray);
 	}
 
+	
 	/*
 	 * this method displays double elements in a 2D array format
 	 */
-	public static void doubleOutputArray(double doubleArray[][])
-	{
+	public static void doubleOutputArray(double doubleArray[][]){
 	System.out.println("elements of double array are :");
 	PrintWriter printwriter = new PrintWriter(new OutputStreamWriter(System.out));
-		for(int i=0; i<rows ; i++)
-		{
-		for(int j=0;j<columns; j++)
-		{
+		for(int i=0; i<rows ; i++){
+		for(int j=0;j<columns; j++){
 		printwriter.print("\t"+doubleArray[i][j]);
 		printwriter.flush();
 		}
 		System.out.println("\n");
 		}
-	
 	}
 
+	
 	/*
 	 * this method accepts elements of boolean type from the user
 	 */
-	public static void booleanInputArray()
-	{
+	public static void booleanInputArray(){
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter number of rows");
 	rows = scanner.nextInt();
@@ -145,10 +130,8 @@ public class Array
 	
 	boolean [][]booleanArray = new boolean[rows][columns];
 	System.out.println("enter " +total+ "boolean elements");
-		for(int i=0; i<rows ; i++)
-		{
-		for(int j=0;j<columns; j++)
-		{
+		for(int i=0; i<rows ; i++){
+		for(int j=0;j<columns; j++){
 		booleanArray[i][j] = scanner.nextBoolean();
 		}
 		}
@@ -159,14 +142,11 @@ public class Array
 	/*
 	 * method to display boolean output in a 2D array format
 	 */
-	public static void booleanOutputArray(boolean booleanArray[][])
-	{
+	public static void booleanOutputArray(boolean booleanArray[][]){
 	System.out.println("elements of boolean array are :");
 	PrintWriter printwriter = new PrintWriter(new OutputStreamWriter(System.out));
-		for(int i=0; i<rows ; i++)
-		{
-		for(int j=0;j<columns; j++)
-		{
+		for(int i=0; i<rows ; i++){
+		for(int j=0;j<columns; j++){
 		printwriter.print("\t"+booleanArray[i][j]);
 		printwriter.flush();
 		}

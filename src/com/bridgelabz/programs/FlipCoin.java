@@ -10,18 +10,15 @@
 package com.bridgelabz.programs;
 import java.util.Scanner;
 
-public class FlipCoin
-{
+public class FlipCoin{
 	static float Tail=0,Head=0,NumberOfFlips =0, HeadPercentage, TailPercentage;
 	
-	public static void main(String args[])
-	{
+	public static void main(String args[]){
 	Scanner scanner = new Scanner(System.in);
 	System.out.println("enter the number of times u wish to flip the coin");
 	int flip = scanner.nextInt();
 
-	for(int i=1; i<=flip;i++)
-	{
+	for(int i=1; i<=flip;i++){
 	if(Math.random()<0.5)
 	{
 	System.out.println("tails");
